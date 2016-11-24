@@ -6,6 +6,7 @@
 
 ###Getting Started
 > Using this app on your local computer is simply a matter of cloning the files, downloading the needed dependencies, and then initializing the main file:
+
 1. Clone the repo
 2. In terminal: $npm install
 3. In terminal: $node main.js
