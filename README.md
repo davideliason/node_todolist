@@ -14,5 +14,5 @@
   3. $ node main.js
 3. Open browser url to localhost:8080
 
-Written with :dog2:
+Written with :blue_heart: and ![node](./nodejs-150x122.png)
 
