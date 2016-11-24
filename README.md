@@ -1,10 +1,10 @@
-#node ToDo List
+#Node ToDo List
 ##[David Eliason](http://www.thedavideliason.com)
 ###November 23, 2016
-##Description
+###Description
 >This is an app to keep track of tasks, using node, express, ejs templating, and various middleware modules
 
-##Getting Started
+###Getting Started
 >Clone the repo
 >In terminal: $npm install
 >In terminal: $node main.js
