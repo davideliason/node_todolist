@@ -7,7 +7,9 @@
 ###Getting Started
 > Using this app on your local computer is simply a matter of cloning the files, downloading the needed dependencies, and then initializing the main file.
 
-1. Clone the repo
-2. In terminal: $npm install
-3. In terminal: $node main.js
-4. Open browser url to localhost:8080
+1. Clone the repo (e.g. $ git clone https://github.com/davethemaker/node_todolist )
+2. In terminal:
+  1. cd node_todolist
+  2. $npm install
+  3. $node main.js
+3. Open browser url to localhost:8080
