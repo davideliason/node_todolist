@@ -1,0 +1,24 @@
+{
+  "name": "node_todolist",
+  "version": "0.1.0",
+  "description": "to-do list using node, express, modules",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davethemaker/node_todolist.git"
+  },
+  "keywords": [
+    "todo",
+    "node",
+    "express"
+  ],
+  "author": "David Eliason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davethemaker/node_todolist/issues"
+  },
+  "homepage": "https://github.com/davethemaker/node_todolist#readme"
+}
