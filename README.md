@@ -1,6 +1,6 @@
 #Node ToDo List
 ##[David Eliason](http://www.thedavideliason.com)
-###November 23, 2016
+###November 23rd, 25th, 2016
 ###Description
 >This is an app to keep track of tasks, using node, express, ejs templating, and various middleware modules
 
