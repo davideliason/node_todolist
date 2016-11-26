@@ -8,7 +8,11 @@ app.set('view engine','ejs');
 
 app.use(morgan('combined'))
 .use(express.static(__dirname + '/public'))
-.use(bodyParser())
+.use(bodyParser());
+
+app.get('/about',function(req,res){
+	res.render('pages/about');
+});
 
 app.get('/',function(req,res){
   var html = '<form action="/" method="post">' +
