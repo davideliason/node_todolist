@@ -30,7 +30,7 @@ app.post('/', function(req, res){
   	}
   } // add the new task to the array
   console.log(tasks.length + " is the task list length");
-  res.render('todo.ejs',{ task :req.body.task  });
+  res.render('todo.ejs',{ task :req.body.task, tasks : tasks });
 });
 
 app.listen(8080);
