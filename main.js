@@ -16,7 +16,7 @@ app.get('/about',function(req,res){
 
 app.get('/',function(req,res){
   var html = '<a href="/about">About</a><hr><form action="/" method="post">' +
-	               'Enter your name:' +
+	               'Add a task:' +
 	               '<input type="text" name="task" placeholder=" feed the fish.." />' +
 	               '<br>' +
 	               '<button style="background-color: blue" type="submit">Confirm</button>' +
