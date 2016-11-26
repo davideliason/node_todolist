@@ -1,7 +1,10 @@
 var express = require('express');
-var app = express();
+var session = require('cookie-session');
+var bodyParser = require('body-parser'); // avail. under req.body
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var morgan = require('morgan');
-var bodyParser = require('body-parser');
+
+var app = express();
 
 // set the view engine to ejs
 app.set('view engine','ejs');
