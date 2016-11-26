@@ -15,7 +15,7 @@ app.get('/about',function(req,res){
 });
 
 app.get('/',function(req,res){
-  var html = '<form action="/" method="post">' +
+  var html = '<a href="/about">About</a><hr><form action="/" method="post">' +
 	               'Enter your name:' +
 	               '<input type="text" name="task" placeholder=" feed the fish.." />' +
 	               '<br>' +
