@@ -3,9 +3,12 @@ var app = express();
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 
+// set the view engine to ejs
+app.set('view engine','ejs');
+
 app.use(morgan('combined'))
 .use(express.static(__dirname + '/public'))
-.use(bodyParser());
+.use(bodyParser())
 
 app.get('/',function(req,res){
   var html = '<form action="/" method="post">' +
@@ -26,9 +29,10 @@ app.post('/', function(req, res){
   var task = req.body.task;
   for(var key in task){
   	if(task.hasOwnProperty(key)){
-  		tasks.push(task[key]);
+  		temp.push(task[key]);
   	}
-  } // add the new task to the array
+  } 
+  // add the new task to the array
   console.log(tasks.length + " is the task list length");
   res.render('todo.ejs',{ task :req.body.task, tasks : tasks });
 });
