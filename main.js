@@ -33,12 +33,12 @@ app.post('/', function(req, res){
   var task = req.body.task;
   for(var key in task){
   	if(task.hasOwnProperty(key)){
-  		temp.push(task[key]);
+  		tasks.push(task[key]);
   	}
   } 
   // add the new task to the array
   console.log(tasks.length + " is the task list length");
-  res.render('todo.ejs',{ task :req.body.task, tasks : tasks });
+  res.render('pages/todo.ejs',{ task :req.body.task, tasks : tasks });
 });
 
 app.listen(8080);
