@@ -20,6 +20,14 @@ app.get('/about',function(req,res){
 
 app.get('/todo',function(req,res){
 
+   var html = '<a href="/about">About</a><hr><form action="/todo/add" method="post">' +
+                 'Add a task:' +
+                 '<input type="text" name="task" placeholder=" feed the fish.." />' +
+                 '<br>' +
+                 '<button style="background-color: blue" type="submit">Confirm</button>' +
+              '</form>';
+               
+  res.send(html);
 });
 
 app.post('/todo/add',function(req, res){
@@ -33,17 +41,6 @@ app.post('/todo/add',function(req, res){
   // add the new task to the array
   console.log(tasks.length + " is the task list length");
   res.render('pages/todo.ejs',{ task :req.body.task, tasks : tasks });
-});
-
-app.get('/todo',function(req,res){
-  var html = '<a href="/about">About</a><hr><form action="/" method="post">' +
-	               'Add a task:' +
-	               '<input type="text" name="task" placeholder=" feed the fish.." />' +
-	               '<br>' +
-	               '<button style="background-color: blue" type="submit">Confirm</button>' +
-              '</form>';
-               
-  res.send(html);
 });
 
 app.listen(8080);
