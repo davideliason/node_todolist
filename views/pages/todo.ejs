@@ -1,6 +1,9 @@
 <h3>My ToDo List</h3>
 
-<% for (var i = 0; i <= tasks.length; i++ ){ %>
-  <%= tasks[i] %>
-	
-<% } %>
+<% console.log(tasks) %>
+
+<form action="/todo/add" method="post">
+add a task: <input type="text" name="task" placeholder="new task.." />
+<button style="background-color: blue" type="submit">Confirm</button>
+</form> 
+

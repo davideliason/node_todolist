@@ -6,6 +6,9 @@ var morgan = require('morgan');
 
 var app = express();
 
+var tasks = []; // global
+
+
 // set the view engine to ejs
 app.set('view engine','ejs');
 
@@ -28,17 +31,13 @@ app.get('/todo',function(req,res){
   //             '</form>';
                
   // res.send(html);
-   res.render('pages/todo.ejs' );
+   res.render('pages/todo.ejs',{tasks : tasks} );
 });
 
 app.post('/todo/add',function(req, res){
-     var tasks = [];
      var task = req.body.task;
-     for(var key in task){
-        if(task.hasOwnProperty(key)){
-        tasks.push(task[key]);
-    }
-  } 
+     tasks.push(task);
+ 
   // add the new task to the array
   console.log(tasks.length + " is the task list length");
   res.render('pages/todo.ejs',{ task :req.body.task, tasks : tasks });
