@@ -1,6 +1,6 @@
 var express = require('express');
-var session = require('cookie-session');
-var bodyParser = require('body-parser'); // avail. under req.body
+var session = require('cookie-session'); // we will need this to set sessions
+var bodyParser = require('body-parser'); // avail. under req.body, we need this module in order to grab 'post' data
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var morgan = require('morgan');
 
@@ -11,13 +11,31 @@ app.set('view engine','ejs');
 
 app.use(morgan('combined'))
 .use(express.static(__dirname + '/public'))
-.use(bodyParser());
+.use(bodyParser()) 
+.use(session({secret : 'todotopsecret'}));
 
 app.get('/about',function(req,res){
 	res.render('pages/about');
 });
 
-app.get('/',function(req,res){
+app.get('/todo',function(req,res){
+
+});
+
+app.post('/todo/add',function(req, res){
+     var tasks = [];
+     var task = req.body.task;
+     for(var key in task){
+        if(task.hasOwnProperty(key)){
+        tasks.push(task[key]);
+    }
+  } 
+  // add the new task to the array
+  console.log(tasks.length + " is the task list length");
+  res.render('pages/todo.ejs',{ task :req.body.task, tasks : tasks });
+});
+
+app.get('/todo',function(req,res){
   var html = '<a href="/about">About</a><hr><form action="/" method="post">' +
 	               'Add a task:' +
 	               '<input type="text" name="task" placeholder=" feed the fish.." />' +
@@ -26,22 +44,6 @@ app.get('/',function(req,res){
               '</form>';
                
   res.send(html);
-});
-
-app.post('/', function(req, res){
-  // var userName = req.body.userName;
-  // var html = 'Hello: ' + userName + '.<br>' +
-  //            '<a href="/">Try again.</a>';
-  var tasks = [];
-  var task = req.body.task;
-  for(var key in task){
-  	if(task.hasOwnProperty(key)){
-  		tasks.push(task[key]);
-  	}
-  } 
-  // add the new task to the array
-  console.log(tasks.length + " is the task list length");
-  res.render('pages/todo.ejs',{ task :req.body.task, tasks : tasks });
 });
 
 app.listen(8080);
