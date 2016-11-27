@@ -20,14 +20,15 @@ app.get('/about',function(req,res){
 
 app.get('/todo',function(req,res){
 
-   var html = '<a href="/about">About</a><hr><form action="/todo/add" method="post">' +
-                 'Add a task:' +
-                 '<input type="text" name="task" placeholder=" feed the fish.." />' +
-                 '<br>' +
-                 '<button style="background-color: blue" type="submit">Confirm</button>' +
-              '</form>';
+  //  var html = '<a href="/about">About</a><hr><form action="/todo/add" method="post">' +
+  //                'Add a task:' +
+  //                '<input type="text" name="task" placeholder=" feed the fish.." />' +
+  //                '<br>' +
+  //                '<button style="background-color: blue" type="submit">Confirm</button>' +
+  //             '</form>';
                
-  res.send(html);
+  // res.send(html);
+   res.render('pages/todo.ejs' );
 });
 
 app.post('/todo/add',function(req, res){
