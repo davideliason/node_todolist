@@ -8,6 +8,8 @@
 
 [View it live](https://todowithnode.herokuapp.com/)
 
+Or, you can do it this way, too:
+
 > Using this app on your local computer is simply a matter of cloning the files, downloading the needed dependencies, and then initializing the main file.
 
 1. Clone the repo (e.g. $ git clone https://github.com/davethemaker/node_todolist )
