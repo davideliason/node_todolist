@@ -1,11 +1,15 @@
 <h3>My ToDo List</h3>
 
-<% for (var i=0; i<=tasks.length;i++){ %>
+<% if (tasks.length === 0){ %>
+   <h5> No tasks yet </h5>
+<% } else { %>
+
+<% for (var i=0; i<= tasks.length; i++){ %>
    <ul>
       <li>   <%= tasks[i] %>  </li>
    </ul>
 	
-<% } %>
+<% } } %>
 
 <form action="/todo/add" method="post">
 add a task: <input type="text" name="task" placeholder="new task.." />
