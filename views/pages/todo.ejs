@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-4">
   <title>To Do</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -16,24 +16,43 @@
             <div class="col-sm-4">
                <a href="/about">about</a>
             </div>   
-		        
+	   </div>	
 
-		<% if (tasks.length === 0){ %>
-		   <h5> No tasks yet </h5>
-		<% } else { %>
+ 	  <div class="row">
+            <div class="col-sm-4">
+            </div>
 
-		<% for (var i=0; i< tasks.length; i++){ %>
-		   <ul>
-		      <li style="list-style:none" ><a href="/delete/<%= i %>"> x</a> <%= tasks[i] %>  </li>
-		   </ul>
-			
-		<% } } %>
+             <div class="col-sm-4">
+                 <% if (tasks.length === 0){ %>
+		  			 <h5> No tasks yet </h5>
+					<% } else { %>
 
-		<form action="/todo/add" method="post">
-		add a task: <input type="text" name="task" placeholder="new task.." />
-		  <button style="background-color: blue" type="submit">Confirm</button>
-	    </form> 
+				<% for (var i=0; i< tasks.length; i++){ %>
+				   <ul>
+				      <li style="list-style:none" ><a href="/delete/<%= i %>"> x</a> <%= tasks[i] %>  </li>
+				   </ul>
+					
+				<% } } %>
+            </div>
+
+            <div class="col-sm-4">
+            </div>
+      </div>
+            
+	  <div class="row">	
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+
+			<form action="/todo/add" method="post">
+			add a task: <input type="text" name="task" placeholder="new task.." />
+		   		<button style="background-color: blue" type="submit">Confirm</button>
+	    	</form> 
+        </div>
+
+        <div class="col-sm-2"></div>
+
+	  </div>
     </main>
-
-
-<% include ../partials/footer %>
+ <% include ../partials/footer %>
+</body>
+</html>
