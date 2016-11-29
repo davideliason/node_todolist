@@ -43,4 +43,9 @@ app.post('/todo/add',function(req, res){
   res.render('pages/todo.ejs',{ task :req.body.task, tasks : tasks });
 });
 
+app.get('/delete/:id',function(req,res){
+  tasks.splice(req.params.id,1);
+  res.render('pages/todo.ejs',{tasks: tasks});
+});
+
 app.listen(8080);
