@@ -1,25 +1,39 @@
-<meta charset="utf-8">
-<title>To Do</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>To Do</title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+</head>
 
-<h3>My ToDo List</h3>
+<body class = "container">  
+  <main class = "jumbotron">
+ 	  <div class="row">
+            <div class="col-sm-8">
+		        <h3>My ToDo List</h3>
+		    </div>
+            <div class="col-sm-4">
+               <a href="/about">about</a>
+            </div>   
+		        
 
-<% if (tasks.length === 0){ %>
-   <h5> No tasks yet </h5>
-<% } else { %>
+		<% if (tasks.length === 0){ %>
+		   <h5> No tasks yet </h5>
+		<% } else { %>
 
-<% for (var i=0; i< tasks.length; i++){ %>
-   <ul>
-      <li style="list-style:none" ><a href="/delete/<%= i %>"> x</a> <%= tasks[i] %>  </li>
-   </ul>
-	
-<% } } %>
+		<% for (var i=0; i< tasks.length; i++){ %>
+		   <ul>
+		      <li style="list-style:none" ><a href="/delete/<%= i %>"> x</a> <%= tasks[i] %>  </li>
+		   </ul>
+			
+		<% } } %>
 
-<form action="/todo/add" method="post">
-add a task: <input type="text" name="task" placeholder="new task.." />
-<button style="background-color: blue" type="submit">Confirm</button>
-</form> 
+		<form action="/todo/add" method="post">
+		add a task: <input type="text" name="task" placeholder="new task.." />
+		  <button style="background-color: blue" type="submit">Confirm</button>
+	    </form> 
+    </main>
 
 
 <% include ../partials/footer %>
