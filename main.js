@@ -2,7 +2,7 @@ var express = require('express');
 var session = require('cookie-session'); // we will need this to set sessions
 var bodyParser = require('body-parser'); // avail. under req.body, we need this module in order to grab 'post' data
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
-var morgan = require('morgan');
+var morgan = require('morgan'); // logging data to terminal
 
 var app = express();
 
@@ -12,12 +12,12 @@ var tasks = []; // global
 // set the view engine to ejs
 app.set('view engine','ejs');
 
-app.use(morgan('combined'))
+app.use(morgan('combined'))  // okay to chain
 .use(express.static(__dirname + '/public'))
 .use(bodyParser()) 
 .use(session({secret : 'todotopsecret'}));
 
-app.get('/about',function(req,res){
+app.get('/todo/about',function(req,res){
 	res.render('pages/about');
 });
 
