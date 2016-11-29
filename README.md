@@ -16,7 +16,7 @@
 
 ---
 ![main page](todo_mainpage.png)
-![main page](todo_about.png)
+![about page](todo_about.png)
 
 ---
 
