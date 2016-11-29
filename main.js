@@ -17,7 +17,11 @@ app.use(morgan('combined'))  // okay to chain
 .use(bodyParser()) 
 .use(session({secret : 'todotopsecret'}));
 
-app.get('/todo/about',function(req,res){
+app.get('/',function(req,res){
+  res.render('pages/about');
+});
+
+app.get('/about',function(req,res){
 	res.render('pages/about');
 });
 
