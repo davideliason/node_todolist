@@ -1,7 +1,10 @@
 <h3>My ToDo List</h3>
 
 <% for (var i=0; i<=tasks.length;i++){ %>
-	 <%= tasks[i] %>
+   <ul>
+      <li>   <%= tasks[i] %>  </li>
+   </ul>
+	
 <% } %>
 
 <form action="/todo/add" method="post">
