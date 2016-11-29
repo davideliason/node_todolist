@@ -2,7 +2,7 @@
 ##[David Eliason](http://www.thedavideliason.com)
 ###November 23rd, 25th, 28th 2016
 ###Description
->This is an app to keep track of tasks, using node, express, ejs templating, and various middleware modules
+>This is an app to keep track of tasks, using node, express, ejs templating, bootstrap, and various middleware modules
 
 ###Getting Started
 > Using this app on your local computer is simply a matter of cloning the files, downloading the needed dependencies, and then initializing the main file.
