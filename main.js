@@ -18,11 +18,11 @@ app.use(morgan('combined'))  // okay to chain
 .use(session({secret : 'todotopsecret'}));
 
 app.get('/',function(req,res){
-  res.render('pages/about');
+  res.render('pages/about.ejs');
 });
 
 app.get('/about',function(req,res){
-	res.render('pages/about');
+	res.render('pages/about.ejs');
 });
 
 app.get('/todo',function(req,res){
