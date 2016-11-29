@@ -1,6 +1,6 @@
 #Node ToDo List
 ##[David Eliason](http://www.thedavideliason.com)
-###November 23rd, 25th, 2016
+###November 23rd, 25th, 28th 2016
 ###Description
 >This is an app to keep track of tasks, using node, express, ejs templating, and various middleware modules
 
@@ -13,6 +13,10 @@
   2. $ npm install
   3. $ node main.js
 3. Open browser url to localhost:8080
+
+---
+![main page](todo_mainpage.png)
+![main page](todo_about.png)
 
 ---
 
