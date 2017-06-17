@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "description": "to-do list using node, express, modules",
   "main": "main.js",
+  "engines": {
+    "node": "6.0.0"
+  },
   "scripts": {
-    "start" : "node main.js"
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
@@ -15,9 +18,6 @@
     "node",
     "express"
   ],
-  "engines": {
-    "node": "6.0.0"
-  },
   "author": "David Eliason",
   "license": "MIT",
   "bugs": {
@@ -27,6 +27,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-session": "^2.0.0-alpha.2",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "morgan": "^1.7.0"
