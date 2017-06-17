@@ -2,7 +2,7 @@
 ##[David Eliason](http://www.thedavideliason.com)
 ###November 23rd, 25th, 28th 2016
 ###Description
->This is an app to keep track of tasks, using node, express, ejs templating, bootstrap, and various middleware modules
+>Front-end UI using node + express + ejs to help keep track of tasks
 
 ###Getting Started
 
