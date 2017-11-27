@@ -8,6 +8,8 @@
 
 [View it live](https://todowithnode.herokuapp.com/)
 
+[Return to Portfolio](https://davideliason.github.io/)
+
 Or, you can do it this way, too:
 
 > Using this app on your local computer is simply a matter of cloning the files, downloading the needed dependencies, and then initializing the main file.
@@ -27,4 +29,6 @@ Or, you can do it this way, too:
 ---
 
 Written with :blue_heart: and ![node](./nodejs-150x122.png)
+
+[Return to Portfolio](https://davideliason.github.io/)
 
