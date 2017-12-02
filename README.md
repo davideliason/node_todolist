@@ -1,10 +1,10 @@
-#Node ToDo List
-##[David Eliason](http://www.thedavideliason.com)
-###November 23rd, 25th, 28th 2016
-###Description
+# Node ToDo List
+## [David Eliason](http://www.davethemaker.com)
+### November 23rd, 25th, 28th 2016
+### Description
 >Front-end UI using node + express + ejs to help keep track of tasks
 
-###Getting Started
+### Getting Started
 
 [View it live](https://todowithnode.herokuapp.com/)
 
