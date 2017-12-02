@@ -16,9 +16,11 @@ Or, you can do it this way, too:
 
 1. Clone the repo (e.g. $ git clone https://github.com/davethemaker/node_todolist )
 2. In terminal:
+````
   1. $ cd node_todolist
   2. $ npm install
   3. $ node main.js
+````
 3. Open browser url to localhost:8080
 
 ---
